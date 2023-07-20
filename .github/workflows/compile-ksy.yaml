@@ -1,0 +1,32 @@
+name: 'Compile KSY Schemas'
+
+on:
+    push:
+        branches:
+            - main
+            - '**-ksy'
+    pull_request:
+
+jobs:
+    compile:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout project
+              uses: actions/checkout@v3
+
+            - name: Setup JVM
+              uses: actions/setup-java@v3
+              with:
+                distribution: 'temurin'
+                java-version: '18'
+
+            - name: Download Kaitai
+              run: |
+                curl -L https://github.com/kaitai-io/kaitai_struct_compiler/releases/download/0.10/kaitai-struct-compiler-0.10.zip -o kaitai.zip
+                unzip -d . kaitai.zip
+                rm kaitai.zip
+            
+            - name: Generate for all files
+              run: find ./ -type f -iname "*.ksy" -not -path "./kaitai-struct-compiler-0.10/*" -print0 | xargs -r -0 -n1 ./kaitai-struct-compiler-0.10/bin/kaitai-struct-compiler -t html 
+              
+
