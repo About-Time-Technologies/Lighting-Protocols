@@ -1,5 +1,6 @@
 meta:
   id: arttrigger
+  title: ArtTrigger
 
 doc: |
   The ArtTrigger packet is used to send trigger macros to the network. The most common implementation involves a single controller broadcasting to all other devices.

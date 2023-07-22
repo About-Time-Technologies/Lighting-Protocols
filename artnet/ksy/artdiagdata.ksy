@@ -2,6 +2,7 @@
 
 meta:
   id: artdiagdata
+  title: ArtDiagData
 
 doc: |
   ArtDiagData is a general purpose packet that allows a node or controller to send diagnostics data for display.

@@ -3,6 +3,7 @@
 
 meta:
   id: artcommand
+  title: ArtCommand
 
 doc: |
   The ArtCommand packet is used to send property set style commands. The packet can be unicast or broadcast, the decision being application specific

@@ -2,6 +2,7 @@
 
 meta:
   id: artipprogreply
+  title: ArtIpProgReply
 
 doc: |
   The ArtIpProgReply packet is issued by a Node in response to an ArtIpProg packet. Nodes that do not support remote programming of IP address do not reply to ArtIpProg packets. In all scenarios, the ArtIpProgReplyis sent to the private address of the sender.

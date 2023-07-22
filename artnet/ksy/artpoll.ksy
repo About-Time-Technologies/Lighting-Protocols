@@ -1,5 +1,6 @@
 meta:
   id: artpoll
+  title: ArtPoll
 
 doc: |
   The ArtPoll packet is used to discover the presence of other Controllers, Nodes and Media Servers. The ArtPoll packet can be sent by any device, but is usually only sent by the Controller. Both Controllers and Nodes respond to the packet.

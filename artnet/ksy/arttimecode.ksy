@@ -1,5 +1,6 @@
 meta:
   id: arttimecode
+  title: ArtTimeCode
 
 doc: |
   ArtTimeCode allows time code to be transported over the network. The data format is compatible with both longitudinaltime code and MIDI time code. The four key types of Film, EBU, Drop Frame and SMPTE are also encoded.

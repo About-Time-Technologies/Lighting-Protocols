@@ -3,6 +3,7 @@
 
 meta:
   id: artipprog
+  title: ArtIpProg
 
 doc: |
   The ArtIpProg packet allows the IP settings of a Node to be reprogrammed.

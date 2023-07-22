@@ -1,5 +1,6 @@
 meta:
   id: artpollreply
+  title: ArtPollReply
 
 doc: |
   A device, in response to a Controller's ArtPoll, sends the ArtPollReply. The device should wait for a random delay of up to 1s before sending the reply. This mechanism is intended to reduce packet bunching when scaling up to very large systems.

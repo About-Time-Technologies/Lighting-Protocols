@@ -2,6 +2,7 @@
 
 meta:
   id: artaddress
+  title: ArtAddress
 
 doc: |
   A Controlleror monitoring device on the network can reprogram numerous controls of a node remotely. This,for example, would allow the lighting console to re-route DMX512 data at remote locations. This is achieved by sending an ArtAddress packet to the Node’s IP address. (The IP address is returned in the ArtPoll packet). The node replies with an ArtPollReply packet.

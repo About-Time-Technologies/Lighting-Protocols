@@ -1,5 +1,6 @@
 meta:
   id: artdmx
+  title: ArtDmx
 
 doc: |
   ArtDmx is the data packet used to transfer DMX512 data. The format is identical for Node to Controller, Node to Node and Controllerto Node.
