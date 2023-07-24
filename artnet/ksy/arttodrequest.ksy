@@ -37,7 +37,7 @@ seq:
     
   - id: opcode
     contents: [0x00, 0x80]
-    doc: OpIpProgReply (transmitted little endian)
+    doc: OpTodRequest (transmitted little endian)
 
   - id: proto_version
     contents: [0x00, 0x0e]
