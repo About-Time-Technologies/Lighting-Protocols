@@ -62,7 +62,7 @@ seq:
     type: u2be
     doc: The slot number, range 1-512, of the device to which this packet is directed. A value 0f 0 indicates that all devices attached to this packet's Port-Address should accept the packet. 
 
-  - id: payload_count
+  - id: len_payload
     type: u2be
     doc: The 16-bit payload size in the range 0 to 480_10
 
@@ -95,7 +95,7 @@ seq:
     doc: The 16-bit beacon mode repeat frequency. If Flags.Beacon is set, this 16-bit value indicates the frequency in Hertz at which the VLC packet should be repeated. 0000_16 means use transmitter default
 
   - id: payload
-    size: payload_count
+    size: len_payload
     doc: The actual VLC payload
  
 types:
