@@ -12,7 +12,7 @@ seq:
 
   - id: vector
     contents: [0x00, 0x00, 0x00, 0x02]
-    doc: Sources sending an E1.31 Data Packet shall set the E1.31 Layer's Vector to VECTOR_E131_DATA_PACKET. This value indicates that the E1.31 framing layer is wrapping a DMP PDU.
+    doc: Sources sending an E1.31 Data Packet shall set the E1.31 Layer's Vector to `VECTOR_E131_DATA_PACKET`. This value indicates that the E1.31 framing layer is wrapping a DMP PDU.
 
   - id: source_name
     type: str
@@ -65,7 +65,7 @@ seq:
 
       Receiving devices conforming are strongly recommended to indicate a sources exceeded condition by some means easily detected at the device, e.g., by a flashing indicator, or obvious status message.
 
-      ## Receiving devices may additionally indicate a sources exceeded condition by other means such as remote indication initiated by a network message. This is particularly appropriate for devices which may be hard to access.
+      Receiving devices may additionally indicate a sources exceeded condition by other means such as remote indication initiated by a network message. This is particularly appropriate for devices which may be hard to access.
 
       ## Requirements for Devices with Multiple Operating Modes
 
