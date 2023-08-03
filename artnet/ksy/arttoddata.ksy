@@ -87,6 +87,7 @@ seq:
     doc: The number of UIDs encoded in this packet. This is the length of the TOD array
     
   - id: tod
+    type: uid
     size: len_tod * 6
     doc: The array of RDM UIDs, each of which is a 6 byte value
 
@@ -108,3 +109,14 @@ enums:
     0xFF:
       id: tod_nak
       doc: The TOD is not available or discovery is incomplete
+
+types:
+  uid:
+    seq:
+      - id: manufacturer_id
+        type: u2be
+        doc: Manufacturer ID
+       
+      - id: device_id
+        type: u4be
+        doc: Device ID
