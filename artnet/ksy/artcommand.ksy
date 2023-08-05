@@ -1,6 +1,3 @@
-# Development nodes
-#   * esta_manufacturer has a misleading description in the spec. It is listed as going Hi Lo, however the description of the fields themselves describe Lo Hi. Based on experimentation, I am pretty sure its Lo Hi however this may need correcting
-
 meta:
   id: artcommand
   title: ArtCommand
@@ -52,6 +49,8 @@ seq:
     doc: |
       The ESTA manufacturer code. These codesare used to represent equipment manufacturer.
       They are assigned by ESTA. This field can be interpreted as two ASCII octetsrepresenting the manufacturer initials.
+
+      _**Note**: The fields are describes as HiLo in name, but descriptions specify LoHi. Experimentally LoHi seems accurate, however this may be a cause for bugs. LoHi also matches ArtPollReply, but does not match ArtPoll so you may need to invert this field yourself in some scenarios._
 
   - id: length
     type: u2be
