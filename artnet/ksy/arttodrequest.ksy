@@ -63,4 +63,7 @@ seq:
 
   - id: address
     size: len_address
-    doc: Array of low bytes for the Port-Address of Nodes that must respond. Combined with Net to give full Port-Address
+    doc: |
+      Array of low bytes for the Port-Address of Nodes that must respond. Combined with Net to give full Port-Address
+
+      **Sizing Notes**: According to spec this should always be 32 bytes. However, to ensure non-compliant devices are likely to parse, this will only read up to the amount of addresses specified in the earlier field
