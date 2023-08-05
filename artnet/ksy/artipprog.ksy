@@ -29,7 +29,7 @@ seq:
     contents: [0x41, 0x72, 0x74, 0x2d, 0x4e, 0x65, 0x74, 0x00]
     doc: | 
       Array of 8 characters, the final character is a null termination.
-      Value = ‘A’ ‘r’ ‘t’ ‘-‘ ‘N’ ‘e’ ‘t’ 0x00
+      Value = 'A' 'r' 't' '-' 'N' 'e' 't' 0x00
     
   - id: opcode
     contents: [0x00, 0xf8]
