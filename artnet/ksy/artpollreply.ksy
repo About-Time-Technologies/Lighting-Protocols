@@ -37,9 +37,13 @@ seq:
     type: u2be
     doc: Node's firmware revision number. The controller should only use this field to decide if a firmware udpate should proceed. The convention is that a higher number is a more recent release of firmware
     
-  - id: port_address
-    type: u2be
-    doc: 15 bit Port-Address to which this packet is destined
+  - id: net_switch
+    type: u1
+    doc: Bits 14-8 of the 15 bit Port-Address are encoded into the bottom 7 bits of this field. This is used in combination with SubSwitch and SwIn[] or SwOut[] to produce the full universe address.
+
+  - id: sub_switch
+    type: u1
+    doc: Bits 7-4 of the 15 bit Port-Address are encoded into the bottom 7 bits of this field. This is used in combination with SubSwitch and SwIn[] or SwOut[] to produce the full universe address.
 
   - id: oem
     type: u2be
