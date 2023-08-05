@@ -300,7 +300,7 @@ types:
         doc: This channel can input data onto the Art-Net network
 
       - id: format
-        type: u1
+        type: b6
         enum: port_type_format
         doc: The format of data this port interacts with
 
