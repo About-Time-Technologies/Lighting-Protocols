@@ -114,11 +114,15 @@ seq:
     doc: This array defines output status of the node
     
   - id: sw_in
-    type: u4be
+    type: u1
+    repeat: expr
+    repeat-expr: 4
     doc: Bits 3-0 of the 15 bit Port-Addressfor each of the 4 possible input ports are encoded into the low nibble.
     
   - id: sw_out
-    type: u4be
+    type: u1
+    repeat: expr
+    repeat-expr: 4
     doc: Bits 3-0 of the 15 bit Port-Addressfor each of the 4 possible output ports are encoded into the low nibble.
     
   - id: acn_priority
