@@ -56,7 +56,18 @@ seq:
 
   - id: target_port
     type: u4be
-    if: _io.size >= 18 and flags.targeted_mode
+    if: _io.size >= 18 and flags.targeted_mode == true
+
+  - size: 4
+    if: _io.size >= 18 and flags.targeted_mode == false
+
+  - id: esta_manufacturer
+    type: u2be
+    doc: The ESTA Manufacturer Code is assigned by ESTA and uniquely identifies the manufacturer that generated this packet.
+
+  - id: oem
+    type: u2be
+    doc: The Oem code uniquely identifies the product sending this packet
 
 types:
   flags:
