@@ -52,7 +52,5 @@ seq:
     doc: Protocol version (constant 14, transmitted big endian)
 
   - id: aux
-    type: u1
-    repeat: expr
-    repeat-expr: 2
+    size: 2
     doc: Transmit as zero
