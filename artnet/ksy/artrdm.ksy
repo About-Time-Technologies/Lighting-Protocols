@@ -67,8 +67,10 @@ seq:
     doc: The low 8 bits of the Port-Address that should action this packet
     
   - id: rdm_packet
-    size: 256
+    size-eos: true
     doc: The RDM packet data excluding the DMX StartCode. The maximum packet length is 255 + 2-byte checksum - 1-byte start code = 256 bytes
+    valid:
+      max: 256
 
 enums:
   rdm_versions:
