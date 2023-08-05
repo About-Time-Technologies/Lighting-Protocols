@@ -51,10 +51,6 @@ seq:
     type: flags
     doc: Bit fields used to control VL C operation. Bits that are unused shall be transmitted as zero.
 
-  - id: data
-    size: len_data
-    doc: A variable length array of DMX512 lighting data
-
   - id: trans
     type: u2be
     doc: The transaction number is a 16-bit value which allows VLC transactions to be synchronised. A value of 0 indicates the first packet in a transaction. A value of ffff_16 indicates the final packet in the transaction. All other packets contain consecutive numbers which increment on each packet and roll over to 1 at fffe_16
