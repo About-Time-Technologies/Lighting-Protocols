@@ -31,6 +31,7 @@ seq:
   - id: start_code
     type: u1
     doc: The DMX512 start code of this packet. Must not be Zero or RDM
+    valid: 0x91
 
   - id: port_address
     type: u2le
