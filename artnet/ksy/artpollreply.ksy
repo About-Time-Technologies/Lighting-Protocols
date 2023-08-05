@@ -189,6 +189,21 @@ seq:
     size: 6
     doc: RDMnet & LLRP Default Responder UID
     if: _io.size >= 224
+
+  - id: user
+    type: u2be
+    doc: Available for user specific data
+    if: _io.size >= 226
+
+  - id: refresh_rate
+    type: u2be
+    doc: RefreshRate allows the device to specify the maximum refresh rate, expressed in Hz, at which it can process ArtDmx. This is designed to allow refresh rates above DMX512 rates, for gateways that implement
+    if: _io.size >= 228
+
+  - size: 11
+    doc: Filler, transmit as 0 for future expansion
+    if: _io.size >= 239
+
     
 types:
   status_1:
