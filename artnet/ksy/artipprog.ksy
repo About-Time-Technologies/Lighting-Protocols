@@ -79,7 +79,6 @@ types:
         type: b1
         doc: |
           Set to enable DHCP (if set, ignore the lower bits - )
-          Note: the following values are not skipped if set as the values are still present
 
       - type: b1
 
