@@ -79,9 +79,9 @@ types:
         type: b1
         doc: Enable Targeted Mode
 
-      - id: vlc_transmission
+      - id: disable_vlc_transmission
         type: b1
-        doc: Enable VLC transmission
+        doc: Disables VLC transmission when set
 
       - id: diagnostic_unicast
         type: b1
