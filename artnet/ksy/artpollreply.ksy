@@ -151,18 +151,15 @@ seq:
     
   - size: 3
     doc: Spare, not used, set to 0
-    if: _io.size >= 200
     
   - id: style
     type: u1
     enum: style_codes
     doc: The Style code defines the equipment style of the device.
-    if: _io.size >= 201
     
   - id: mac
     size: 6
     doc: MAC Address of the node, set to 0 if node cannot supply this information
-    if: _io.size >= 207
     
   - id: bind_ip
     type: u4be
