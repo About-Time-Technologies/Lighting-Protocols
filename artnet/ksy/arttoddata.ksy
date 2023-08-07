@@ -48,7 +48,12 @@ seq:
     
   - id: port
     type: u1
-    doc: Physical port index in a range of 1-4. This number is used with bind_index to identify the physical port that generated the packets. This is done by referencing data in the ArtPollReply with a matching bind_index. Physical Port = (BindIndex - 1)  * ArtPollReply->NumPortsLow + ArtTodDataPort. As most modern gateways will implmenet one universe per ArtPollReply, ArtTodData->Port will usually be set to a value of 1.
+    doc: |
+      Physical port index in a range of 1-4. This number is used with bind_index to identify the physical port that generated the packets. 
+    
+      `Physical port = (BindIndex - 1)  * ArtPollReply->NumPortsLow + ArtTodDataPort`
+    
+      Most gateways will implmenet one universe per ArtPollReply so `ArtTodData->Port` will usually be set to a value of 1.
     valid:
       min: 1
       max: 4

@@ -61,6 +61,8 @@ seq:
   - id: data
     size-eos: true
     doc: The interpretation of the payload is defined by the Key
+    valid:
+      max: 512
 
 enums:
   keys:

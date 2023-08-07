@@ -58,7 +58,9 @@ seq:
 
   - id: len_address
     type: u1
-    doc: The number of entries in Address that are used. Max value is 32
+    doc: The number of entries in Address that are used
+    valid:
+      max: 32
 
   - id: address
     size: len_address
