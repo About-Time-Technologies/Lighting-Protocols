@@ -8,20 +8,20 @@ doc: |
   ArtDiagData is a general purpose packet that allows a node or controller to send diagnostics data for display.
   The ArtPoll packet sent by controllers defines the destination to which these messages should be sent.
 
-  Controller: 
-    Receive: Application specific
-    Unicase Transmit: As defined by ArtPoll (Allowed, with Targeted Mode)
-    Broadcast: As defined by ArtPoll (Allowed)
-
-  Node:
-    Receive: No Action
-    Unicast Transmit: As defined by ArtPoll (Allowed, with Targeted Mode)
-    Broadcast: As defined by ArtPoll (Allowed)
-
-  Media Server:
-    Receive: No Action
-    Unicast Transmit: As defined by ArtPoll (Allowed, with Targeted Mode)
-    Broadcast: As defined by ArtPoll (Allowed)
+  | Handling Rules | |
+  | -- | -- |
+  | **Controller**   ||
+  | Receive          | Application specific |
+  | Unicast Transmit | As defined by ArtPoll (Allowed, with Targeted Mode) |
+  | Broadcast        | As defined by ArtPoll (Allowed) |
+  | **Node**         ||
+  | Receive          | No Action |
+  | Unicast Transmit | As defined by ArtPoll (Allowed, with Targeted Mode) |
+  | Broadcast        | As defined by ArtPoll (Allowed) |
+  | **Media Server** ||
+  | Receive          | No Action |
+  | Unicast Transmit | As defined by ArtPoll (Allowed, with Targeted Mode) |
+  | Broadcast        | As defined by ArtPoll (Allowed) |
 
 seq:
   - id: id

@@ -7,25 +7,24 @@ meta:
 doc: |
   The ArtTodData packet is sent from Node Output Gateways in response to an ArtTodRequest from Controller. It is always sent as broadcast.
 
-  Controller: 
-    Receive: No Action
-    Unicase Transmit: Not Allowed
-    Broadcast: Not Allowed
-
-  Node Output Gateway:
-    Receive: No Action
-    Unicast Transmit: Not Allowed
-    Broadcast: Output Gateway always Directed Broadcasts this packet
-    
-  Node Input Gateway:
-    Receive: No Action
-    Unicast Transmit: Not Allowed
-    Broadcast: Not Allowed
-
-  Media Server:
-    Receive: No Action
-    Unicast Transmit: Not Allowed
-    Broadcast: Not Allowed
+  | Handling Rules | |
+  | -- | -- |
+  | **Controller**   ||
+  | Receive          | No Action |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast        | Not Allowed |
+  | **Node Output Gateway**         ||
+  | Receive          | No Action |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast        | Output Gateway always Directed Broadcasts this packet |
+  | **Node Input Gateway**         ||
+  | Receive          | No Action |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast        | Not Allowed |
+  | **Media Server** ||
+  | Receive          | No Action |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast        | Not Allowed |
 
 seq:
   - id: id

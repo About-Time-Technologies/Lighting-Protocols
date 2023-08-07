@@ -20,10 +20,12 @@ doc: |
 
   The Payload is a fixed length array of 512, 8-bit octets. The interpretation of this fieldis dependent upon the Oem field. If the Oem field is set to a value other than 0xffff then the Payload is manufacturer specific
 
-  All:
-    Receive: Application Specific
-    Unicast Transmit: Application Specific
-    Broadcast: Application Specific
+  | Handling Rules | |
+  | -- | -- |
+  | **All**   ||
+  | Receive          | Application Specific |
+  | Unicast Transmit | Application Specific |
+  | Broadcast        | Application Specific |
 
 seq:
   - id: id

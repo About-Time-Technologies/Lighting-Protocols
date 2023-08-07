@@ -69,10 +69,12 @@ doc: |
 
   When a node provides multiple DMX512 inputs, it is the responsibility of the Node to handle merging of data. This is because the Node will have only one IP address. If this were not handled at the Node, ArtDmx packets with identical IP addresses and identical universe numbers, but conflicting level data would be transmitted to the network.
 
-  All:
-    Receive: Application Specific
-    Unicast Transmit: Yes
-    Broadcast: No
+  | Handling Rules | |
+  | -- | -- |
+  | **All**   ||
+  | Receive          | Application Specific |
+  | Unicast Transmit | Yes |
+  | Broadcast        | No |
 
 seq:
   - id: id

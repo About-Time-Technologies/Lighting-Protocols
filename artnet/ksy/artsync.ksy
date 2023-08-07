@@ -21,20 +21,20 @@ doc: |
 
   When a port is merging multiple streams of ArtDmx from different IP addresses, ArtSync  packets shall be ignored
 
-  Controller: 
-    Receive: No Action
-    Unicase Transmit: Not Allowed
-    Broadcast: Controller broadcasts this packet to synchronously transfer previous ArtDmx packets to Node's output
-
-  Node:
-    Receive: Transfer previous ArtDmx packets to output
-    Unicast Transmit: Not Allowed
-    Broadcast: Not Allowed
-
-  Media Server:
-    Receive: Transfer previous ArtDmx packets to output
-    Unicast Transmit: Not Allowed
-    Broadcast: Not Allowed
+  | Handling Rules | |
+  | -- | -- |
+  | **Controller**   ||
+  | Receive          | No Action |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast        | Controller broadcasts this packet to synchronously transfer previous ArtDmx packets to Node's output |
+  | **Node**         ||
+  | Receive          | Transfer previous ArtDmx packets to output |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast        | Not Allowed |
+  | **Media Server** ||
+  | Receive          | Transfer previous ArtDmx packets to output |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast        | Not Allowed |
 
 seq:
   - id: id

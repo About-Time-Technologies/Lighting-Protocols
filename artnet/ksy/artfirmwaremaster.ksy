@@ -20,21 +20,21 @@ doc: |
   The UBEA is the User Bios Expansion Area. This is a limited firmware upload mechanism that allows third party firmware extensions to be added to a Node.  
 
   Manufacturers who implement this feature must document the software interface requirements
-  
-  Controller: 
-    Receive: No Action
-    Unicase Transmit: Controller transmits to a specific node IP address
-    Broadcast: Not allowed
 
-  Node:
-    Receive: Reply with OpFirmwareReply
-    Unicast Transmit: Not Allowed
-    Broadcast: Not Allowed
-
-  Media Server:
-    Receive: Reply with OpFirmwareReply
-    Unicast Transmit: Not Allowed
-    Broadcast: Not Allowed
+  | Handling Rules | |
+  | -- | -- |
+  | **Controller**   ||
+  | Receive          | No Action |
+  | Unicast Transmit | Controller transmits to a specific node IP address |
+  | Broadcast        | Not allowed |
+  | **Node**         ||
+  | Receive          | Reply with OpFirmwareReply |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast        | Not Allowed |
+  | **Media Server** ||
+  | Receive          | Reply with OpFirmwareReply |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast        | Not Allowed |
 
 seq:
   - id: id

@@ -7,25 +7,24 @@ meta:
 doc: |
   The ArtTodControl packet is used to send RDM control parameters over Art-Net. The response is ArtTodData.
 
-  Controller: 
-    Receive: No Action
-    Unicase Transmit: Allowed
-    Broadcast: Allowed
-
-  Node Output Gateway:
-    Receive: Reply with ArtTodData
-    Unicast Transmit: Not Allowed
-    Broadcast: Not Allowed
-    
-  Node Input Gateway:
-    Receive: No Action
-    Unicast Transmit: Not Allowed
-    Broadcast: The Input Gateway Directed Broadcasts to all nodes
-
-  Media Server:
-    Receive: No Action
-    Unicast Transmit: Not Allowed
-    Broadcast: Not Allowed
+  | Handling Rules | |
+  | -- | -- |
+  | **Controller**   ||
+  | Receive          | No Action |
+  | Unicast Transmit | Allowed |
+  | Broadcast        | Allowed |
+  | **Node Output Gateway**         ||
+  | Receive          | Reply with ArtTodData |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast        | Not Allowed |
+  | **Node Input Gateway**         ||
+  | Receive          | No Action |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast        | The Input Gateway Directed Broadcasts to all nodes |
+  | **Media Server** ||
+  | Receive          | No Action |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast        | Not Allowed |
 
 seq:
   - id: id

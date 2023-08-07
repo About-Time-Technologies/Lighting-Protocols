@@ -7,20 +7,20 @@ meta:
 doc: |
   The ArtIpProgReply packet is issued by a Node in response to an ArtIpProg packet. Nodes that do not support remote programming of IP address do not reply to ArtIpProg packets. In all scenarios, the ArtIpProgReplyis sent to the private address of the sender.
 
-  Controller: 
-    Receive: No Action
-    Unicase Transmit: Not Allowed
-    Broadcast: Not Allowed
-
-  Node:
-    Receive: No Action
-    Unicast Transmit: Transmits to specific Controller IP address
-    Broadcast: Not Allowed
-
-  Media Server:
-    Receive: No Action
-    Unicast Transmit: Transmits to specific Controller IP address
-    Broadcast: Not Allowed
+  | Handling Rules | |
+  | -- | -- |
+  | **Controller**   ||
+  | Receive          | No Action |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast        | Not Allowed |
+  | **Node**         ||
+  | Receive          | No Action |
+  | Unicast Transmit | Transmits to specific Controller IP address |
+  | Broadcast        | Not Allowed |
+  | **Media Server** ||
+  | Receive          | No Action |
+  | Unicast Transmit | Transmits to specific Controller IP address |
+  | Broadcast        | Not Allowed |
 
 seq:
   - id: id

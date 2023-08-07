@@ -5,20 +5,20 @@ meta:
 doc: |
   ArtNzs is the data packet used to transfer DMX51 2 data with non-zero start codes (except RDM). The format is identical for Node to Controller, Node to Node and Controller to Node.
 
-  Controller: 
-    Receive: Application Specific
-    Unicase Transmit: Yes
-    Broadcast: No
-
-  Node:
-    Receive: Application Specific
-    Unicast Transmit: Yes
-    Broadcast: No
-
-  Media Server:
-    Receive: Application Specific
-    Unicast Transmit: Yes
-    Broadcast: No
+  | Handling Rules | |
+  | -- | -- |
+  | **Controller**   ||
+  | Receive          | Application Specific |
+  | Unicast Transmit | Yes |
+  | Broadcast        | No |
+  | **Node**         ||
+  | Receive          | Application Specific |
+  | Unicast Transmit | Yes |
+  | Broadcast        | No |
+  | **Media Server** ||
+  | Receive          | Application Specific |
+  | Unicast Transmit | Yes |
+  | Broadcast        | No |
 
 seq:
   - id: id

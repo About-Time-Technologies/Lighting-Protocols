@@ -11,21 +11,21 @@ doc: |
   All nodes power on with all inputs enabled. 
 
   Caution should be exercised when implementing this function in the controller. Keep in mind that some network traffic may be operating on a node to node basis.
-  
-  Controller: 
-    Receive: No Action
-    Unicase Transmit: Controller transmits to a specific node IP address
-    Broadcast: Not allowed
 
-  Node:
-    Receive: Reply with ArtPollReply
-    Unicast Transmit: Not Allowed
-    Broadcast: Not Allowed
-
-  Media Server:
-    Receive: Reply with ArtPollReply
-    Unicast Transmit: Not Allowed
-    Broadcast: Not Allowed
+  | Handling Rules | |
+  | -- | -- |
+  | **Controller**   ||
+  | Receive          | No Action |
+  | Unicast Transmit | Controller transmits to a specific node IP address |
+  | Broadcast        | Not allowed |
+  | **Node**         ||
+  | Receive          | Reply with ArtPollReply |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast        | Not Allowed |
+  | **Media Server** ||
+  | Receive          | Reply with ArtPollReply |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast        | Not Allowed |
 
 seq:
   - id: id

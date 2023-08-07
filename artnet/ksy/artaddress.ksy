@@ -8,21 +8,21 @@ doc: |
   A Controlleror monitoring device on the network can reprogram numerous controls of a node remotely. This,for example, would allow the lighting console to re-route DMX512 data at remote locations. This is achieved by sending an ArtAddress packet to the Node’s IP address. (The IP address is returned in the ArtPoll packet). The node replies with an ArtPollReply packet.
   Fields 5 to 13 contain the data that will be programmed into the node
 
-  Controller: 
-    Receive: No Action
-    Unicase Transmit: Controller transmits to a specific node IP address.
-    Broadcast: Not Allowed
-
-  Node:
-    Receive: Reply by unicasting ArtPollReply
-    Unicast Transmit: Not Allowed
-    Broadcast: Not Allowed
-
-  Media Server:
-    Receive: Reply by unicasting ArtPollReply
-    Unicast Transmit: Not Allowed
-    Broadcast: Not Allowed
-
+  | Handling Rules | |
+  | -- | -- |
+  | **Controller** | |
+  | Receive | No Action |
+  | Unicast Transmit | Controller transmits to a specific node IP address. |
+  | Broadcast | Not Allowed |
+  | **Node** | |
+  | Receive | Reply by unicasting ArtPollReply |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast | Not Allowed |
+  | **Media Server** | |
+  | Receive | Reply by unicasting ArtPollReply |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast | Not Allowed |
+  
 seq:
   - id: id
     contents: [0x41, 0x72, 0x74, 0x2d, 0x4e, 0x65, 0x74, 0x00]

@@ -23,11 +23,13 @@ doc: |
 
   Consumers of ArtPoll shall accept as valid a packet of length 12 octets or larger. Any missing fields are assumed to be zero. This requirement is due to the fact that the length of ArtPoll has increased over the life of the protocol.
 
-  All:
-    Receive: Send ArtPollReply
-    Unicast Transmit: Allowed, with Targeted Mode.
-    Directed Broadcast: Controller broadcasts this packet to poll all Controllers and Nodes on the network
-    Limited Broadcast: Not recommended
+  | Handling Rules | |
+  | -- | -- |
+  | **All**   ||
+  | Receive          | Send ArtPollReply |
+  | Unicast Transmit | Allowed, with Targeted Mode. |
+  | Directed Broadcast | Controller broadcasts this packet to poll all Controllers and Nodes on the network |
+  | Limited Broadcast        | Not recommended |
 
 seq:
   - id: id

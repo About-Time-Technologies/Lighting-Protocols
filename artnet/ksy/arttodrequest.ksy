@@ -8,25 +8,24 @@ doc: |
   This packet is used to request the Table of RDM Devices (TOD). A Node receiving this packet
   must not interpret it as forcing full discovery. Full discovery is only initiated at power on, or when an ArtTodControl.AtcFlush is received. The response is ArtTodData.
 
-  Controller:
-    Receive: No Action
-    Unicase Transmit: Not Allowed
-    Broadcast: Controller Directed Broadcast to all nodes
-
-  Node Output Gateway:
-    Receive: Reply with ArtTodData
-    Unicast Transmit: Not Allowed
-    Broadcast: Not Allowed
-
-  Node Input Gateway:
-    Receive: No action
-    Unicast Transmit: Not Allowed
-    Broadcast: Input Gateway Directed Broadcasts to all nodes
-
-  Media Server:
-    Receive: No Action
-    Unicast Transmit: Not Allowed
-    Broadcast: Not Allowed
+  | Handling Rules | |
+  | -- | -- |
+  | **Controller**   ||
+  | Receive          | No Action |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast        | Controller Directed Broadcast to all nodes |
+  | **Node Output Gateway**         ||
+  | Receive          | Reply with ArtTodData |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast        | Not Allowed |
+  | **Node Input Gateway**         ||
+  | Receive          | No action |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast        | Input Gateway Directed Broadcasts to all nodes |
+  | **Media Server** ||
+  | Receive          | No Action |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast        | Not Allowed |
 
 seq:
   - id: id

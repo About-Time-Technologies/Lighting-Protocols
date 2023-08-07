@@ -7,26 +7,25 @@ meta:
 doc: |
   The ArtRdm packet is used to transport all non-discovery RDM messages over Art-Net
 
-  Controller: 
-    Receive: No Action
-    Unicase Transmit: Yes
-    Broadcast: Not Allowed
-
-  Node Output Gateway:
-    Receive: No Action
-    Unicast Transmit: Yes
-    Broadcast: Not Allowed
-    
-  Node Input Gateway:
-    Receive: No Action
-    Unicast Transmit: Yes
-    Broadcast: Not Allowed
-
-  Media Server:
-    Receive: No Action
-    Unicast Transmit: Yes
-    Broadcast: Not Allowed
-
+  | Handling Rules | |
+  | -- | -- |
+  | **Controller**   ||
+  | Receive          | No Action |
+  | Unicast Transmit | Yes |
+  | Broadcast        | Not Allowed |
+  | **Node Output Gateway**         ||
+  | Receive          | No Action |
+  | Unicast Transmit | Yes |
+  | Broadcast        | Not Allowed |
+  | **Node Input Gateway**         ||
+  | Receive          | No Action |
+  | Unicast Transmit | Yes |
+  | Broadcast        | Not Allowed |
+  | **Media Server** ||
+  | Receive          | No Action |
+  | Unicast Transmit | Yes |
+  | Broadcast        | Not Allowed |
+  
 seq:
   - id: id
     contents: [0x41, 0x72, 0x74, 0x2d, 0x4e, 0x65, 0x74, 0x00]

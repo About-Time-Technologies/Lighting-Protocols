@@ -4,21 +4,21 @@ meta:
 
 doc: |
   This packet is sent by the Node to the Controller in acknowledgement of each OpFirmwareMaster packet.
-  
-  Controller: 
-    Receive: Send next OpFirmwareMaster
-    Unicase Transmit: Not allowed
-    Broadcast: Not allowed
 
-  Node:
-    Receive: No Action
-    Unicast Transmit: Node transmits to specfic controller IP address
-    Broadcast: Not Allowed
-
-  Media Server:
-    Receive: No Action
-    Unicast Transmit: Node transmits to specific controller IPI address
-    Broadcast: Not Allowed
+  | Handling Rules | |
+  | -- | -- |
+  | **Controller**   ||
+  | Receive          | Send next OpFirmwareMaster |
+  | Unicast Transmit | Not allowed |
+  | Broadcast        | Not allowed |
+  | **Node**         ||
+  | Receive          | No Action |
+  | Unicast Transmit | Node transmits to specfic controller IP address |
+  | Broadcast        | Not Allowed |
+  | **Media Server** ||
+  | Receive          | No Action |
+  | Unicast Transmit | Node transmits to specific controller IP address |
+  | Broadcast        | Not Allowed |
 
 seq:
   - id: id

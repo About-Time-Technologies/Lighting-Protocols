@@ -9,10 +9,12 @@ doc: |
 
   Consumers of ArtPollReplyshall accept as valid a packet of length 198(highlighted in grey below) octets or larger.Any missing fields are assumed to be zero. This requirement is due to the fact that the length of ArtPollReply has increased over the life of the protocol.
 
-  All:
-    Receive: No Art-Net action
-    Unicast Transmit: Allowed
-    Broadcast: Not Allowed
+  | Handling Rules | |
+  | -- | -- |
+  | **All**   ||
+  | Receive          | No Art-Net action |
+  | Unicast Transmit | Allowed |
+  | Broadcast        | Not Allowed |
 
 seq:
   - id: id

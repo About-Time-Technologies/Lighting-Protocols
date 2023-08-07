@@ -9,20 +9,20 @@ doc: |
   The ArtIpProg packet allows the IP settings of a Node to be reprogrammed.
   The ArtIpProg packet is sent by a Controllerto the private address of a Node. If the Node supports remote programming of IP address, it will respond with an ArtIpProgReply packet. In all scenarios, the ArtIpProgReply is sent to the private address of the sender.
 
-  Controller: 
-    Receive: No Action
-    Unicase Transmit: Controller transmits to a specific node IP address
-    Broadcast: Not Allowed
-
-  Node:
-    Receive: Reply with ArtIpProgReply
-    Unicast Transmit: Not Allowed
-    Broadcast: Not Allowed
-
-  Media Server:
-    Receive: Reply with ArtIpProgReply
-    Unicast Transmit: Not Allowed
-    Broadcast: Not Allowed
+  | Handling Rules | |
+  | -- | -- |
+  | **Controller**   ||
+  | Receive          | No Action |
+  | Unicast Transmit | Controller transmits to a specific node IP address |
+  | Broadcast        | Not Allowed |
+  | **Node**         ||
+  | Receive          | Reply with ArtIpProgReply |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast        | Not Allowed |
+  | **Media Server** ||
+  | Receive          | Reply with ArtIpProgReply |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast        | Not Allowed |
 
 seq:
   - id: id

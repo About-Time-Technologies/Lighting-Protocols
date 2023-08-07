@@ -24,10 +24,13 @@ doc: |
   |SwoutText|This command is used to re-programme the label associated with the ArtPollReply->Swout fields. Syntax: "SwoutText=Playback&" |
   |SwinText |This command is used to re-programme the label associated with the ArtPollReply->Swin fields. Syntax: "SwinText=Record&"     |
 
-  All:
-    Receive: Application Specific
-    Unicast Transmit: Application Specific
-    Broadcast: Application Specific
+
+  | Handling Rules | |
+  | -- | -- |
+  | **All**   ||
+  | Receive          | Application Specific |
+  | Unicast Transmit | Application Specific |
+  | Broadcast        | Application Specific |
 
 seq:
   - id: id

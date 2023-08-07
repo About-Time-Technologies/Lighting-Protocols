@@ -9,25 +9,24 @@ doc: |
   
   Please note that this packet was added at the release of Art-Net II. For backwards compatibility it is only accepable to implement this packet in addition to ArtRdm. It must not be used instead of ArtRDM
 
-  Controller: 
-    Receive: No Action
-    Unicase Transmit: Yes
-    Broadcast: Not Allowed
-
-  Node Output Gateway:
-    Receive: No Action
-    Unicast Transmit: Yes
-    Broadcast: Not Allowed
-    
-  Node Input Gateway:
-    Receive: No Action
-    Unicast Transmit: Yes
-    Broadcast: Not Allowed
-
-  Media Server:
-    Receive: No Action
-    Unicast Transmit: Not Allowed
-    Broadcast: Not Allowed
+  | Handling Rules | |
+  | -- | -- |
+  | **Controller**   ||
+  | Receive          | No Action |
+  | Unicast Transmit | Yes |
+  | Broadcast        | Not Allowed |
+  | **Node Output Gateway**         ||
+  | Receive          | No Action |
+  | Unicast Transmit | Yes |
+  | Broadcast        | Not Allowed |
+  | **Node Input Gateway**         ||
+  | Receive          | No Action |
+  | Unicast Transmit |  Yes |
+  | Broadcast        | Not Allowed |
+  | **Media Server** ||
+  | Receive          | No Action |
+  | Unicast Transmit | Not Allowed |
+  | Broadcast        | Not Allowed |
 
 seq:
   - id: id
