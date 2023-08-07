@@ -49,12 +49,10 @@ seq:
   - id: flags
     type: flags
     doc: Set behaviour of Node
-    if: _io.size >= 13
 
   - id: diag_priority
     type: u1
     enum: priority_codes
-    if: _io.size >= 14
 
   - id: target_port
     type: u4be
