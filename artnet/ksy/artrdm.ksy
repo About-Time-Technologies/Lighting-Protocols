@@ -25,7 +25,7 @@ doc: |
   | Receive          | No Action |
   | Unicast Transmit | Yes |
   | Broadcast        | Not Allowed |
-  
+
 seq:
   - id: id
     contents: [0x41, 0x72, 0x74, 0x2d, 0x4e, 0x65, 0x74, 0x00]
@@ -66,10 +66,8 @@ seq:
     doc: The low 8 bits of the Port-Address that should action this packet
     
   - id: rdm_packet
-    size-eos: true
+    size: "_io.size - 24 < 256 ? _io.size - 24 : 256"
     doc: The RDM packet data excluding the DMX StartCode. The maximum packet length is 255 + 2-byte checksum - 1-byte start code = 256 bytes
-    valid:
-      max: 256
 
 enums:
   rdm_versions:
