@@ -59,10 +59,8 @@ seq:
     doc: The trigger subkey
 
   - id: data
-    size-eos: true
+    size: "_io.size - 18 < 512 ? _io.size - 18 : 512"
     doc: The interpretation of the payload is defined by the Key
-    valid:
-      max: 512
 
 enums:
   keys:
