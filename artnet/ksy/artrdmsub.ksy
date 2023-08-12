@@ -60,7 +60,8 @@ seq:
     
   - id: command_class
     type: u1
-    doc: As per RDM specification. This field defines wether this is a Get, Set, GetResponse, or SetResponse #TODO Enums
+    doc: As per RDM specification. This field defines wether this is a Get, Set, GetResponse, or SetResponse
+    enum: command_classes
     
   - id: parameter_id
     type: u2be
@@ -80,7 +81,7 @@ seq:
     doc: Spare transmit as zero, receviers don't test
     
   - id: data
-    size: sub_count * 2
+    size: "command_class == command_classes::set or command_class == command_classes::get_response ? sub_count * 2 : 0"
     doc: The size of this 16-bit big endian data array is sub_count for Set and GetResponse, and 0 for Get and SetResponse commands
     
 enums:
@@ -92,6 +93,24 @@ enums:
     0x01:
       id: rdm_standard
       doc: Devices that support the standard 1.0 version of RDM
+      
+  command_classes:
+    0x20:
+      id: get
+      doc: Request the value or status of a parameter from the device
+      
+    0x21:
+      id: get_response
+      doc: Response from a get_command message
+      
+    0x30:
+      id: set
+      doc: Change the value of a parameter within the device
+      
+    0x31:
+      id: set_response
+      doc: Response from a set_command message
+  
       
 types:
   uid:
