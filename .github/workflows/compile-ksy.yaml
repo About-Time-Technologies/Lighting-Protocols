@@ -27,6 +27,6 @@ jobs:
                 rm kaitai.zip
             
             - name: Generate for all files
-              run: find ./ -type f -iname "*.ksy" -not -path "./kaitai-struct-compiler-0.10/*" -print0 | xargs -t -r -0 -n1 -- ./kaitai-struct-compiler-0.10/bin/kaitai-struct-compiler -t html 
+              run: find ./ -type f -iname "*.ksy" -not -path "./kaitai-struct-compiler-0.10/*" -print0 | xargs -t -r -0 -n1 -- ./kaitai-struct-compiler-0.10/bin/kaitai-struct-compiler -t all 
               
 
