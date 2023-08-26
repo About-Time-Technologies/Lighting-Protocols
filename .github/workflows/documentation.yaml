@@ -42,7 +42,7 @@ jobs:
           python-version: '3.11' 
 
       - name: Install Python Dependencies
-        run: python3 -m pip install pydantic
+        run: python3 -m pip install pydantic pyyaml
 
       - name: Setup JVM
         uses: actions/setup-java@v3
