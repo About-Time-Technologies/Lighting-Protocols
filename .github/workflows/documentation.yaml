@@ -50,15 +50,25 @@ jobs:
           distribution: 'temurin'
           java-version: '18'
 
-      - name: Download Kaitai
+      - name: Setup Scala for Kaitai Compilation
+        uses: olafurpg/setup-scala@v11
+
+      - name: Clone new Kaitai version
+        uses: actions/checkout@v4
+        with:
+          repository: 'Vitineth/kaitai_struct_compiler'
+          ref: 'vitineth/patches'
+          path: 'vitineth_kaitai'
+
+      - name: Compile Kaitai
         run: |
-          mkdir -p /tmp/kaitai
-          curl -L https://github.com/kaitai-io/kaitai_struct_compiler/releases/download/0.10/kaitai-struct-compiler-0.10.zip -o /tmp/kaitai/kaitai.zip
-          unzip -d /tmp/kaitai /tmp/kaitai/kaitai.zip
-          rm /tmp/kaitai/kaitai.zip
+          cd vitineth_kaitai
+          sbt compile compilerJVM/stage compilerJVM/universal:packageBin
 
       - name: Run builder
         run: python3 .github/pages.py
+        env:
+          KSC_EXECUTABLE: "$GITHUB_WORKSPACE/vitineth_kaitai/jvm/target/universal/stage/bin/kaitai-struct-compiler"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
