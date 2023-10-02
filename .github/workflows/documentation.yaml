@@ -68,7 +68,7 @@ jobs:
       - name: Run builder
         run: python3 .github/pages.py
         env:
-          KSC_EXECUTABLE: "$GITHUB_WORKSPACE/vitineth_kaitai/jvm/target/universal/stage/bin/kaitai-struct-compiler"
+          KSC_EXECUTABLE: "${{ vars.GITHUB_WORKSPACE }}/vitineth_kaitai/jvm/target/universal/stage/bin/kaitai-struct-compiler"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
