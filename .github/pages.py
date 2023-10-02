@@ -141,7 +141,7 @@ TEMPLATE: Annotated[str, "The base HTML template into which the listings will be
 
 
 ROOT: Annotated[str, "The root of the cloned project from which all files should be relative"] = os.path.join(os.path.dirname(__file__), '..')
-KSC_EXECUTABLE: Annotated[str, "The location of the kaitai struct compiler to be invoked to compile the formats into html"] = "/tmp/kaitai/kaitai-struct-compiler-0.10/bin/kaitai-struct-compiler"
+KSC_EXECUTABLE: Annotated[str, "The location of the kaitai struct compiler to be invoked to compile the formats into html"] = os.getenv("KSC_EXECUTABLE", "/tmp/kaitai/kaitai-struct-compiler-0.10/bin/kaitai-struct-compiler")
 
 def get_title(file: str) -> Optional[str]:
     """
