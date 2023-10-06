@@ -57,7 +57,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: 'Vitineth/kaitai_struct_compiler'
-          ref: 'vitineth/patches'
+          ref: 'main'
           path: 'vitineth_kaitai'
 
       - name: Compile Kaitai
